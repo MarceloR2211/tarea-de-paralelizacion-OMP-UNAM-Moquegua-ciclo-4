@@ -1,0 +1,58 @@
+# Project: progamas de omp
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = ompuno.o main.o ompdos.o omptres.o ompcuatro.o ompcinco.o ompseis.o ompsiete.o ompocho.o ompdiez.o ompnueve.o
+LINKOBJ  = ompuno.o main.o ompdos.o omptres.o ompcuatro.o ompcinco.o ompseis.o ompsiete.o ompocho.o ompdiez.o ompnueve.o
+LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -fopenmp
+INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = "progamas de omp.exe"
+CXXFLAGS = $(CXXINCS) -fopenmp
+CFLAGS   = $(INCS) 
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+ompuno.o: ompuno.cpp
+	$(CPP) -c ompuno.cpp -o ompuno.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+ompdos.o: ompdos.cpp
+	$(CPP) -c ompdos.cpp -o ompdos.o $(CXXFLAGS)
+
+omptres.o: omptres.cpp
+	$(CPP) -c omptres.cpp -o omptres.o $(CXXFLAGS)
+
+ompcuatro.o: ompcuatro.cpp
+	$(CPP) -c ompcuatro.cpp -o ompcuatro.o $(CXXFLAGS)
+
+ompcinco.o: ompcinco.cpp
+	$(CPP) -c ompcinco.cpp -o ompcinco.o $(CXXFLAGS)
+
+ompseis.o: ompseis.cpp
+	$(CPP) -c ompseis.cpp -o ompseis.o $(CXXFLAGS)
+
+ompsiete.o: ompsiete.cpp
+	$(CPP) -c ompsiete.cpp -o ompsiete.o $(CXXFLAGS)
+
+ompocho.o: ompocho.cpp
+	$(CPP) -c ompocho.cpp -o ompocho.o $(CXXFLAGS)
+
+ompdiez.o: ompdiez.cpp
+	$(CPP) -c ompdiez.cpp -o ompdiez.o $(CXXFLAGS)
+
+ompnueve.o: ompnueve.cpp
+	$(CPP) -c ompnueve.cpp -o ompnueve.o $(CXXFLAGS)
